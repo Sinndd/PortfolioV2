@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModeToggle } from '@/components/ui/modeToggle';
 import Image from 'next/image';
 import MenuToggle from '@/components/ui/menuToggle';
 
@@ -18,7 +17,6 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex items-center space-x-4">
-        <ModeToggle />
         <div className="md:hidden">
           <MenuToggle />
         </div>
