@@ -70,6 +70,48 @@
   }
 }
 
-.animate-fadeInDown {
-  animation: fadeInDown 0.5s ease-out;
+@keyframes shiny {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+.shiny-text {
+  display: inline-block;
+  background: linear-gradient(120deg, #fff0 40%, #fffc 50%, #fff0 60%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shiny 5s linear infinite;
+  position: relative;
+  color: #b5b5b5a4; /* Gris clair initial */
+  font-weight: bold;
+  overflow: hidden;
+  font-size: xx-large;
+}
+
+.email-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  background-color: #171717; /* bg-neutral-900 */
+  color: white;
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  box-shadow: inset 0 0 20px 10px rgba(156, 163, 175, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  min-width: 250px;
+  min-height: 20px; /* Augmenter la hauteur minimale pour plus d'espace */
+}
+
+.email-text {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
