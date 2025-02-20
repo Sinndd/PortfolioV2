@@ -3,8 +3,7 @@ import * as THREE from 'three';
 
 const FloatingLogos: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [previousMousePosition, setPreviousMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -67,7 +66,7 @@ const FloatingLogos: React.FC = () => {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      if (!isDragging) {
+      if (!isHovered) {
         scene.rotation.x -= 0.001; // Adjust speed of rotation for top to bottom
         scene.rotation.y += 0.0005; // Slightly rotate on the Y axis
       }
@@ -77,37 +76,24 @@ const FloatingLogos: React.FC = () => {
     animate();
 
     // Mouse events
-    const onMouseDown = (event: MouseEvent) => {
-      setIsDragging(true);
-      setPreviousMousePosition({ x: event.clientX, y: event.clientY });
+    const onMouseEnter = () => {
+      setIsHovered(true);
     };
 
-    const onMouseMove = (event: MouseEvent) => {
-      if (isDragging) {
-        const deltaX = event.clientX - previousMousePosition.x;
-        const deltaY = event.clientY - previousMousePosition.y;
-        scene.rotation.y += deltaX * 0.005;
-        scene.rotation.x += deltaY * 0.005;
-        setPreviousMousePosition({ x: event.clientX, y: event.clientY });
-      }
+    const onMouseLeave = () => {
+      setIsHovered(false);
     };
 
-    const onMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    mount.addEventListener('mousedown', onMouseDown);
-    mount.addEventListener('mousemove', onMouseMove);
-    mount.addEventListener('mouseup', onMouseUp);
+    mount.addEventListener('mouseenter', onMouseEnter);
+    mount.addEventListener('mouseleave', onMouseLeave);
 
     // Cleanup
     return () => {
-      mount.removeEventListener('mousedown', onMouseDown);
-      mount.removeEventListener('mousemove', onMouseMove);
-      mount.removeEventListener('mouseup', onMouseUp);
+      mount.removeEventListener('mouseenter', onMouseEnter);
+      mount.removeEventListener('mouseleave', onMouseLeave);
       mount.removeChild(renderer.domElement);
     };
-  }, [isDragging, previousMousePosition]);
+  }, [isHovered]);
 
   return <div ref={mountRef} className="relative w-full h-full flex justify-center items-center" style={{ height: '100%' }} />;
 };
