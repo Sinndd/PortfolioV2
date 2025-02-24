@@ -1,15 +1,42 @@
 import React from 'react';
+import Image from 'next/image';
+
+const skills = [
+  { name: 'JavaScript', logo: '/logos/javascript.svg' },
+  { name: 'React', logo: '/logos/react.svg' },
+  { name: 'CSS', logo: '/logos/css3.svg' },
+  { name: 'Git', logo: '/logos/git.svg' },
+  { name: 'GSAP', logo: '/logos/gsap.svg' },
+  { name: 'Github', logo: '/logos/github.svg' },
+  { name: 'MySQL', logo: '/logos/mysql.svg' },
+  { name: 'NextJS', logo: '/logos/nextdotjs.svg' },
+  { name: 'NodeJS', logo: '/logos/nodedotjs.svg' },
+  { name: 'HTML', logo: '/logos/html5.svg' },
+  { name: 'npm', logo: '/logos/npm.svg' },
+  { name: 'Shadcn', logo: '/logos/shadcnui.svg' },
+  { name: 'TailwindCSS', logo: '/logos/tailwindcss.svg' },
+  { name: 'Typescript', logo: '/logos/typescript.svg' },
+  { name: 'Vercel', logo: '/logos/vercel.svg' },
+
+
+
+  // Ajoutez d'autres compétences ici
+];
 
 const Skills = () => {
   return (
-    <section id="skills" className="p-4">
-      <h2 className="text-3xl font-bold">Skills</h2>
-      <ul className="mt-2">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>TailwindCSS</li>
-        {/* Ajoutez d'autres compétences ici */}
-      </ul>
+    <section id="skills" className="skillsSection p-4">
+      <div className="outerSectionDiv">
+        <h2 className="skillsTitle text-3xl font-bold mb-4 text-center">Skills</h2>
+        <ul className="mt-2 flex flex-wrap gap-4 justify-center">
+          {skills.map((skill, index) => (
+              <li key={index} className="relative flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-4 py-1.5 text-sm text-white/80 lg:text-base">
+                <Image src={skill.logo} alt={`${skill.name} logo`} width={20} height={20} className="w-5 h-5" />
+                <span>{skill.name}</span>
+              </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
