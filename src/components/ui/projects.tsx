@@ -57,8 +57,8 @@ const Projects = () => {
   return (
     <section id="projects" className="projectSection p-4">
       <div className="outerSectionDiv">
-      <h2 className="projectTitle text-3xl font-bold mb-10 text-center">
-          All my <span className="projectTitleGradient">projects</span>
+        <h2 className="z-2 relative mb-36 md:text-5xl text-center lg:text-center mt-28 mb-12! text-balance text-3xl title">
+          All my <span className="projectTitle projectTitleGradient font-bold">projects</span>
         </h2>
         <div className="projectContainer grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
@@ -77,17 +77,17 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="btnGroup flex mt-6 gap-4">
+                <div className="btnGroup flex flex-col sm:flex-row mt-6 gap-4">
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
                       <Image src="/icons/linkIcon.svg" alt="Live link icon" width={20} height={20} />
-                      <span className="text-white">Live link</span>
+                      <span className="text-white text-base sm:text-sm">Live link</span>
                     </a>
                   )}
                   {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
-                      <Image src="/icons/githubIcon.svg" alt="GitHub icon" width={20} height={20} />
-                      <span className="text-white">Source Code</span>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
+                      <Image src="/logos/github.svg" alt="GitHub icon" width={20} height={20} />
+                      <span className="text-white text-base sm:text-sm">Source Code</span>
                     </a>
                   )}
                 </div>

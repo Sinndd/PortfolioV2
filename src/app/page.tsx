@@ -4,6 +4,8 @@ import About from '../components/ui/about';
 import Projects from '../components/ui/projects';
 import Skills from '../components/ui/skills';
 import Contact from '../components/ui/contact';
+import MoreAbout from '@/components/ui/moreAbout';
+import Banner from '@/components/ui/banner';
 
 export default function Home() {
   return (
@@ -18,6 +20,12 @@ export default function Home() {
         </section>
         <section id="skills" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-80">
           <Skills />
+        </section>
+        <section id="banner" className="p-4 md:p-8 lg:p-12 mb-5 md:mb-24 lg:mb-32 lg:mx-80">
+          <Banner />
+        </section>
+        <section id="moreAbout" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-80">
+          <MoreAbout />
         </section>
         <section id="contact" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-80">
           <Contact />
