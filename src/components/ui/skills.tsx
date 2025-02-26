@@ -17,6 +17,9 @@ const skills = [
   { name: 'TailwindCSS', logo: '/logos/tailwindcss.svg' },
   { name: 'Typescript', logo: '/logos/typescript.svg' },
   { name: 'Vercel', logo: '/logos/vercel.svg' },
+  { name: 'PHP', logo: '/logos/php.svg' },
+  { name: 'Symfony', logo: '/logos/symfony.svg' },
+  { name: 'Framer Motion', logo: '/logos/framerMotion.svg' },
 
 
 
