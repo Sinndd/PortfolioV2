@@ -97,6 +97,15 @@
   }
 }
 
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
+
 .shiny-text {
   display: inline-block;
   background: linear-gradient(120deg, #fff0 40%, #fffc 50%, #fff0 60%) 0 0 / 200% 100%;
@@ -168,6 +177,10 @@
   display: flex;
   flex-shrink: 0;
   min-width: 200%; /* Ajustez la largeur minimale pour contenir les éléments dupliqués */
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
 }
 
 /* Styles pour le conteneur de la bannière */
