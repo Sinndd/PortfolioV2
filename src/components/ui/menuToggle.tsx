@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FaBars, FaTimes, FaUser, FaProjectDiagram, FaTools, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUser, FaProjectDiagram, FaTools, FaEnvelope, FaHome } from 'react-icons/fa';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
 import { Button } from '@/components/ui/button';
 
@@ -23,7 +23,7 @@ const MenuToggle = () => {
   return (
     <DropdownMenu open={menuOpen} onOpenChange={setMenuOpen}>
       <DropdownMenuTrigger asChild>
-      <Button variant="outline" size="icon" onClick={handleMenuToggle} className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 focus-visible:ring-0 focus-visible:outline-0 aria-invalid:focus-visible:ring-0 hover:text-accent-foreground size-9 group rounded-md">
+      <Button variant="outline" size="icon" onClick={handleMenuToggle} className="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 focus-visible:ring-0 focus-visible:outline-0 aria-invalid:focus-visible:ring-0 hover:text-accent-foreground size-9 group rounded-md">
           <span className={`transition-transform duration-300 ${menuOpen ? 'rotate-90' : ''}`}>
             <FaBars className={`h-6 w-6 ${menuOpen ? 'hidden' : 'block'}`} />
             <FaTimes className={`h-6 w-6 ${menuOpen ? 'block' : 'hidden'}`} />
@@ -37,13 +37,12 @@ const MenuToggle = () => {
       >
         <nav className="flex flex-col gap-1">
           <DropdownMenuItem asChild>
-            <a href="#about" onClick={(e) => handleScroll(e, 'about')} className="group flex w-full items-start gap-3 rounded-xl p-3 transition-all duration-300">
+            <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="group flex w-full items-start gap-3 rounded-xl p-3 transition-all duration-300">
               <div className="mt-0.5 rounded-lg p-2 bg-neutral-700 text-neutral-300 group-hover:bg-neutral-300 group-hover:text-neutral-900">
-                <FaUser className="size-5" />
+                <FaHome className="size-5" />
               </div>
               <div className="flex flex-col">
-                <span className="line-clamp-1 text-sm">About</span>
-                <span className="mt-0.5 line-clamp-1 text-xs text-neutral-400 group-hover:text-neutral-50">Learn about me !</span>
+                <span className="line-clamp-1 text-sm">Home</span>
               </div>
             </a>
           </DropdownMenuItem>
@@ -70,13 +69,24 @@ const MenuToggle = () => {
             </a>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
+            <a href="#about" onClick={(e) => handleScroll(e, 'about')} className="group flex w-full items-start gap-3 rounded-xl p-3 transition-all duration-300">
+              <div className="mt-0.5 rounded-lg p-2 bg-neutral-700 text-neutral-300 group-hover:bg-neutral-300 group-hover:text-neutral-900">
+                <FaUser className="size-5" />
+              </div>
+              <div className="flex flex-col">
+                <span className="line-clamp-1 text-sm">About</span>
+                <span className="mt-0.5 line--1 text-xs text-neutral-400 group-hover:text-neutral-50">Learn more about me !</span>
+              </div>
+            </a>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="group flex w/full items-start gap-3 rounded-xl p-3 transition-all duration-300">
               <div className="mt-0.5 rounded-lg p-2 bg-neutral-700 text-neutral-300 group-hover:bg-neutral-300 group-hover:text-neutral-900">
                 <FaEnvelope className="size-5" />
               </div>
               <div className="flex flex-col">
                 <span className="line-clamp-1 text-sm">Contact</span>
-                <span className="mt-0.5 line-clamp-1 text-xs text-neutral-400 group-hover:text-neutral-50">Contact me if you need !</span>
+                <span className="mt-0.5 line--1 text-xs text-neutral-400 group-hover:text-neutral-50">Contact me if you need !</span>
               </div>
             </a>
           </DropdownMenuItem>

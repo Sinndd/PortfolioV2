@@ -9,11 +9,12 @@ const Header = () => {
         <Image src="/monLogo.png" alt="Logo" width={40} height={40} className="md:w-50 md:h-50" />
       </div>
       <nav className="hidden md:flex">
-        <ul className="flex space-x-2 md:space-x-4">
-          <li><a href="#about" className="text-sm md:text-base hover:text-secondary">Home</a></li>
-          <li><a href="#projects" className="text-sm md:text-base hover:text-secondary">Projects</a></li>
-          <li><a href="#skills" className="text-sm md:text-base hover:text-secondary">Skills</a></li>
-          <li><a href="#contact" className="text-sm md:text-base hover:text-secondary">Contact</a></li>
+      <ul className="flex space-x-2 md:space-x-4">
+          <li className="nav-item"><a href="#home" className="text-sm md:text-base hover:text-neutral-400">Home</a></li>
+          <li className="nav-item"><a href="#projects" className="text-sm md:text-base hover:text-neutral-400">Projects</a></li>
+          <li className="nav-item"><a href="#skills" className="text-sm md:text-base hover:text-neutral-400">Skills</a></li>
+          <li className="nav-item"><a href="#about" className="text-sm md:text-base hover:text-neutral-400">About</a></li>
+          <li className="nav-item"><a href="#contact" className="text-sm md:text-base hover:text-neutral-400">Contact</a></li>
         </ul>
       </nav>
       <div className="flex items-center space-x-4">

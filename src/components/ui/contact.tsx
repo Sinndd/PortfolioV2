@@ -44,15 +44,15 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <div className="relative rounded-full bg-blue-700 p-1.5 leading-none font-medium animate-spin-slow ml-20">
+            <div className="relative rounded-full bg-blue-700 p-1.5 leading-none font-medium animate-spin-slow ml-20 md:ml-40 lg:ml-40">
               <div className="relative w-[95px] h-[95px] rounded-full bg-black p-2 flex items-center justify-center">
                 <Image src="/icons/star.png" alt="star" width={32} height={32} className="filter invert" />
-                <svg className="transform-origin-center-center" viewBox="0 0 100 100" overflow="visible" fill="black" style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, transformOrigin: 'center center' }}>
-                  <path id="curve-wnxkz4" d="M 0 50 L 0 50 A 1 1 0 0 1 100 50 L 100 50 L 100 50 A 1 1 0 0 1 0 50 L 0 50" strokeWidth="none" fill="transparent"></path>
-                  <text>
-                    <textPath href="#curve-wnxkz4" startOffset="0" dominantBaseline="Hanging" style={{ fontSize: '13px', fontWeight: 600, wordSpacing: '5px', letterSpacing: '2.1px', fill: 'rgba(242, 242, 242, 0.9)' }}>OPEN TO WORK · OPEN TO WORK ·</textPath>
-                  </text>
-                </svg>
+                  <svg className="transform-origin-center-center" viewBox="0 0 100 100" overflow="visible" fill="black" style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, transformOrigin: 'center center' }}>
+                    <path id="curve-wnxkz4" d="M 0 50 L 0 50 A 1 1 0 0 1 100 50 L 100 50 L 100 50 A 1 1 0 0 1 0 50 L 0 50" strokeWidth="none" fill="transparent"></path>
+                    <text>
+                      <textPath href="#curve-wnxkz4" startOffset="0" dominantBaseline="Hanging" style={{ fontSize: '13px', fontWeight: 600, wordSpacing: '5px', letterSpacing: '2.1px', fill: 'rgba(242, 242, 242, 0.9)' }}>OPEN TO WORK · OPEN TO WORK ·</textPath>
+                    </text>
+                  </svg>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function Site() {
         <section id="home" className="">
           <Home />
         </section>
-        <section id="projects" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-20">
+        <section id="projects" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-40">
           <Projects />
         </section>
         <section id="skills" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-40">

@@ -62,12 +62,12 @@ const Projects = () => {
         </h2>
         <div className="projectContainer grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
-            <div key={index} className="projectCard p-4 rounded-lg">
+            <div key={index} className="project-card p-4 rounded-lg">
               <div className={`projectNumber ${index % 2 === 0 ? 'rightNumber' : 'leftNumber'}`}>{project.number}</div>
               <div className={`projectContent ${index % 2 === 0 ? 'leftProjectContent' : 'rightProjectContent'} p-4`}>
                 <div className="flex items-center mb-2">
                   <h3 className="projectHeading text-2xl font-bold">{project.title}</h3>
-                  <hr className={`ml-4 border-t-2 ${project.borderColor}`} style={{ width: '50px' }} />
+                  <hr className={`ml-4 border-t-2 ${project.borderColor} hr-transition`} />
                 </div>
                 <p className="projectSubHeading mb-2 text-gray-500">{project.description}</p>
                 <div className="projectSkillsContainer flex flex-wrap mb-4 gap-2">
@@ -79,13 +79,13 @@ const Projects = () => {
                 </div>
                 <div className="btnGroup flex flex-col sm:flex-row mt-6 gap-4">
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] btn-transition">
                       <Image src="/icons/linkIcon.svg" alt="Live link icon" width={20} height={20} />
                       <span className="text-white text-base sm:text-sm">Live link</span>
                     </a>
                   )}
                   {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]">
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="relative flex h-fit w-full sm:w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] btn-transition">
                       <Image src="/logos/github.svg" alt="GitHub icon" width={20} height={20} />
                       <span className="text-white text-base sm:text-sm">Source Code</span>
                     </a>

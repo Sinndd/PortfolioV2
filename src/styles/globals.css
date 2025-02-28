@@ -236,7 +236,6 @@
 .group {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -245,4 +244,46 @@
 /* Styles pour les éléments du texte */
 span {
   white-space: nowrap;
+}
+
+/*Styles pour l'effet de soulignement des sections du header*/
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: white;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Styles pour l'effet de transition des hr dans les projectCard */
+.hr-transition {
+  width: 50px; /* Largeur initiale */
+  transition: width 0.4s ease;
+}
+
+.project-card:hover .hr-transition {
+  width: 150px; /* Largeur au survol */
+}
+
+/* Styles pour l'effet de transition des boutons de la section project */
+.btn-transition {
+  transition: box-shadow 0.4s ease;
+}
+
+.btn-transition:hover {
+  box-shadow: inset 0 2px 10px #ffffff3f; /* Augmenter l'opacité de la box-shadow */
 }

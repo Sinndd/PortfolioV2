@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const MoreAbout = () => {
   return (
-    <section id="moreAbout" className="relative mx-auto mb-40 flex max-w-[1000px] flex-col items-center justify-center gap-8 lg:size-full lg:flex-row lg:justify-between">
+    <section id="about" className="relative mx-auto mb-40 flex max-w-[1000px] flex-col items-center justify-center gap-8 lg:size-full lg:flex-row lg:justify-between">
       <div className="z-5 relative grid max-w-full flex-col place-content-center px-4 text-center lg:max-w-xl lg:px-2 lg:text-left">
         <h2 className="z-5 relative mb-12 md:text-5xl text-center lg:text-left mt-28 text-balance text-3xl">
           More <span className="projectTitle projectTitleGradient font-bold">about me</span>

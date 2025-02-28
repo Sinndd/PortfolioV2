@@ -4,7 +4,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section id="about" className="about-section md:mt-5 min-h-screen flex flex-col justify-center relative p-0">
+    <section id="home" className="about-section md:mt-5 min-h-screen flex flex-col justify-center relative p-0">
       <video
         autoPlay
         loop
