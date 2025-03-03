@@ -1,11 +1,14 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
     title: 'Screen Lister',
     description: 'Screen-lister is an Electron application that lists the screens connected to your computer using DDC/CI.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Vercel'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'TailwindCSS', 'PostCSS', 'ReactJS', 'NodeJS', 'ddc-node', 'Electron', 'Git'],
     liveLink: 'http://localhost:3000/',
     githubLink: 'https://github.com/Sinndd/screen-lister',
     number: '01',
@@ -17,7 +20,7 @@ const projects = [
   {
     title: 'TODO List',
     description: 'List all your tasks and manage them easily.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Vercel'],
+    tags: ['HTML', 'PicoCSS', 'JavaScript', 'VueJS', 'ViteJS', 'NodeJS', 'Git'],
     liveLink: 'http://localhost:3000/',
     githubLink: 'https://github.com/Sinndd/TODO-List',
     number: '02',
@@ -29,7 +32,7 @@ const projects = [
   {
     title: 'Portfolio',
     description: 'A simple portfolio website to showcase my work.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    tags: ['PHP', 'Symfony', 'Twig', 'CSS', 'JavaScript', 'GSAP', 'Git'],
     liveLink: 'http://localhost:3000/',
     githubLink: 'https://github.com/Sinndd/portfolio',
     number: '03',
@@ -41,7 +44,7 @@ const projects = [
   {
     title: 'PorfolioV2',
     description: 'The new version of my portfolio website to showcase my work.',
-    tags: ['Next.js', 'Tailwind', 'Vercel'],
+    tags: ['NextJS', 'NodeJS', 'TypeScript', 'ReactJS', 'TailwindCSS', 'RadixUI', 'Shadcn', 'Framer Motion', 'Git', 'Vercel'],
     liveLink: 'http://localhost:3000/',
     githubLink: 'https://github.com/Sinndd/PortfolioV2',
     number: '04',
@@ -57,12 +60,25 @@ const Projects = () => {
   return (
     <section id="projects" className="projectSection p-4">
       <div className="outerSectionDiv">
-        <h2 className="z-2 relative mb-36 md:text-5xl text-center lg:text-center mt-28 mb-12! text-balance text-3xl title">
+        <motion.h2
+          className="z-2 relative mb-36 md:text-5xl text-center lg:text-center mt-28 mb-12! text-balance text-3xl title"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           All my <span className="projectTitle projectTitleGradient font-bold">projects</span>
-        </h2>
+        </motion.h2>
         <div className="projectContainer grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
-            <div key={index} className="project-card p-4 rounded-lg">
+            <motion.div
+              key={project.number}
+              className="project-card p-4 rounded-lg"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, delay: index * 0.3 }}
+            >
               <div className={`projectNumber ${index % 2 === 0 ? 'rightNumber' : 'leftNumber'}`}>{project.number}</div>
               <div className={`projectContent ${index % 2 === 0 ? 'leftProjectContent' : 'rightProjectContent'} p-4`}>
                 <div className="flex items-center mb-2">
@@ -72,9 +88,16 @@ const Projects = () => {
                 <p className="projectSubHeading mb-2 text-gray-500">{project.description}</p>
                 <div className="projectSkillsContainer flex flex-wrap mb-4 gap-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className={`projectSkill inline-flex items-center rounded-md ${project.bgColor} px-3 py-0.5 text-sm font-medium ${project.textColor} ring-1 ring-inset ${project.ringColor}`}>
+                    <motion.span
+                      key={`${project.title}-${tag}`}
+                      className={`projectSkill inline-flex items-center rounded-md ${project.bgColor} px-3 py-0.5 text-sm font-medium ${project.textColor} ring-1 ring-inset ${project.ringColor}`}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.5, delay: tagIndex * 0.2 }}
+                    >
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
                 <div className="btnGroup flex flex-col sm:flex-row mt-6 gap-4">
@@ -92,7 +115,7 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

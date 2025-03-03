@@ -18,13 +18,13 @@ export default function Site() {
         <section id="projects" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-40">
           <Projects />
         </section>
-        <section id="skills" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-40">
+        <section id="skills" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-60">
           <Skills />
         </section>
-        <section id="banner" className="p-4 md:p-8 lg:p-12 mb-5 md:mb-24 lg:mb-32 lg:mx-50">
+        <section id="banner" className="p-4 md:p-8 lg:p-12 mb-5 md:mb-24 lg:mb-20 lg:mx-40">
           <Banner />
         </section>
-        <section id="moreAbout" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-32 lg:mx-20">
+        <section id="moreAbout" className="p-4 md:p-8 lg:p-12 mb-20 md:mb-24 lg:mb-40 lg:mx-20">
           <MoreAbout />
         </section>
       </main>

@@ -19,13 +19,13 @@ const Banner = () => {
             <div className="flex shrink-0 justify-around items-center [gap:var(--gap)] animate-marquee flex-row">
               {/* Dupliquer les éléments deux fois pour une boucle fluide */}
               {items.concat(items).map((item, index) => (
-                <span key={index} className="text-sm font-semibold uppercase leading-6 tracking-[0.2em] text-gray-50 md:text-lg lg:text-xl flex items-center">
+                <span key={`${item}-${index}`} className="text-sm font-semibold uppercase leading-6 tracking-[0.2em] text-gray-50 md:text-lg lg:text-xl flex items-center">
                   <Image src="/icons/star.png" alt="star" width={28} height={28} className="mr-2 filter invert" />
                   {item}
                 </span>
               ))}
               {items.concat(items).map((item, index) => (
-                <span key={index + items.length} className="text-sm font-semibold uppercase leading-6 tracking-[0.2em] text-gray-50 md:text-lg lg:text-xl flex items-center">
+                <span key={`${item}-duplicate-${index}`} className="text-sm font-semibold uppercase leading-6 tracking-[0.2em] text-gray-50 md:text-lg lg:text-xl flex items-center">
                   <Image src="/icons/star.png" alt="star" width={28} height={28} className="mr-2 filter invert" />
                   {item}
                 </span>

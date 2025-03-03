@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Contact = () => {
   return (
     <section id="contact" className="flex flex-col items-center justify-center p-10">
-      <div className="h-px w-full bg-gradient-to-r from-black via-neutral-600 to-black my-8"></div>
+      <div className="h-px w-full bg-gradient-to-r from-black via-neutral-600 to-neutral-950 my-8"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
         <div className="p-10">
           <h2 className="text-2xl font-semibold text-amber-100">Nathan Delestre</h2>
@@ -58,7 +58,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="h-px w-full bg-gradient-to-r from-black via-neutral-600 to-black my-8"></div>
+      <div className="h-px w-full bg-gradient-to-r from-black via-neutral-600 to-neutral-950 my-8"></div>
+      <p className="container py-10 pb-6 text-center text-sm text-neutral-500">Copyright © 2025  Nathan Delestre. All rights reserved.</p>
     </section>
   );
 };
