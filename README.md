@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PortfolioV2
 
-## Getting Started
+Ce projet est la v2 de mon portfolio personnel, développé avec Next.js et Tailwind CSS.
 
-First, run the development server:
+## 🚀 Technologies utilisées
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** : Framework React pour un rendu côté serveur et une optimisation des performances.
+- **TypeScript** : Superset de JavaScript avec typage statique pour une meilleure maintenabilité.
+- **Tailwind CSS** : Framework CSS utilitaire pour un design moderne et réactif.
+- **RadixUI** : Bibliothèque de composants d'interface utilisateur entièrement modulables et personnalisables.
+- **Shadcn** : Collection de composants accessibles, personnalisables et open source.
+- **Framer Motion** : Bibliothèque d'animation pour React créée par Framer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Installation et exécution
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Cloner le projet**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/Sinndd/PortfolioV2.git
+   cd PortfolioV2
+   ```
 
-## Learn More
+2. **Installer les dépendances**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Lancer l'application en mode développement**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+   L'application sera accessible sur `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Build pour la production**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## 📌 Fonctionnalités
+
+- Présentation de mes projets et compétences.
+- Interface fluide et optimisée.
+- Responsive design grâce à Tailwind CSS.
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Vous êtes libre de l'utiliser et de le modifier.
+
+---
+Développé avec ❤️ par [Sinndd](https://github.com/Sinndd)

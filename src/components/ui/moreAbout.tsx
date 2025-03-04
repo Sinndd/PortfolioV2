@@ -29,9 +29,6 @@ const MoreAbout = () => {
           <p className="mx-auto my-6 max-w-xl text-base font-light tracking-wider text-[#f2f2f2cc] lg:mx-0 lg:text-base">
             When I'm not coding, I'm exploring new ideas and staying curious.
           </p>
-          <p className="mx-auto max-w-xl text-base font-light tracking-wider text-[#f2f2f2cc] lg:mx-0 lg:text-base">
-            I believe in waking up each day to make a difference!
-          </p>
         </motion.div>
         <motion.div
           className="flex gap-3 mx-auto my-5 lg:mx-0"

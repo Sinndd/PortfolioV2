@@ -63,12 +63,13 @@
   }
 }
 
+/* Couleur du surlignement */
 ::selection {
-  background-color: #8a2be2; /* Couleur violette */
-  color: #ffffff; /* Couleur du texte surligné */
+  background-color: #8a2be2;
+  color: #ffffff;
 }
 
-/* Masquer la scrollbar pour les navigateurs Webkit (Chrome, Safari) */
+/* Masquer la scrollbar pour les navigateurs Webkit (Chrome, Safari, OperaGX) */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -111,6 +112,7 @@
   }
 }
 
+/* Effet pour les titres de section */
 .shiny-text {
   display: inline-block;
   background: linear-gradient(120deg, #fff0 40%, #fffc 50%, #fff0 60%) 0 0 / 200% 100%;
@@ -158,7 +160,7 @@
   animation: marquee var(--duration) linear infinite;
   display: flex;
   flex-shrink: 0;
-  min-width: 200%; /* Ajustez la largeur minimale pour contenir les éléments dupliqués */
+  min-width: 200%;
 }
 
 .animate-spin-slow {
@@ -167,16 +169,16 @@
 
 /* Styles pour le conteneur de la bannière */
 .banner-container {
-  width: 100vw; /* Prendre toute la largeur de la fenêtre */
+  width: 100vw;
   position: relative;
-  height: 125px; /* Ajustez la hauteur totale des bannières */
+  height: 125px;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   display: flex;
-  align-items: center; /* Centrer verticalement */
-  justify-content: center; /* Centrer horizontalement */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styles pour la bannière arrière */
@@ -185,23 +187,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 55px; /* Ajustez la hauteur de la bannière arrière */
+  height: 55px;
   background: linear-gradient(to right, #6799fe, #0255fb);
   opacity: 0.4;
   z-index: -1;
-  transform: rotate(1deg); /* Inclinaison de la bannière arrière */
+  transform: rotate(1deg);
 }
 
 /* Styles pour la bannière avant */
 .banner-front {
   position: absolute;
-  top: 0px; /* Ajustez pour centrer les bannières */
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 60px; /* Ajustez la hauteur de la bannière avant */
+  height: 60px;
   background: linear-gradient(to right, #6799fe, #0255fb);
   z-index: 1;
-  transform: rotate(-2deg); /* Inclinaison de la bannière avant */
+  transform: rotate(-2deg); 
 }
 
 /* Styles pour le contenu de la bannière */
@@ -258,7 +260,7 @@ span {
 }
 
 .project-card:hover .hr-transition {
-  width: 150px; /* Largeur au survol */
+  width: 150px;
 }
 
 /* Styles pour l'effet de transition des boutons de la section project */
@@ -267,5 +269,5 @@ span {
 }
 
 .btn-transition:hover {
-  box-shadow: inset 0 2px 10px #ffffff3f; /* Augmenter l'opacité de la box-shadow */
+  box-shadow: inset 0 2px 10px #ffffff3f;
 }
