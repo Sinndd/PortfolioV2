@@ -24,6 +24,7 @@ const Contact = () => {
               </svg>
             </a>
           </div>
+          <p className='mt-4 text-neutral-400'>delestre.nathan@gmail.com</p>
         </div>
         <div className="p-10 flex flex-col items-start md:items-center justify-center">
           <div className="flex items-center">
